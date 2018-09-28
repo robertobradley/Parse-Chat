@@ -81,6 +81,7 @@ let OKAction = UIAlertAction(title: "OK", style: .default)
             } else {
                 print("User logged in successfully")
                 // display view controller that needs to shown after successful login
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
     }
@@ -93,6 +94,7 @@ let OKAction = UIAlertAction(title: "OK", style: .default)
         }
         else {
             loginUser()
+            
         }
         
     }
