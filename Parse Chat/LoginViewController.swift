@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
 
 //------VARIABLES------//
 //                       uialertcontroller
-let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+let alertController = UIAlertController(title: "Error", message: "Both Fields are empty. \nPlease enter username and password", preferredStyle: .alert)
     
 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
     { (action) in
@@ -48,28 +48,7 @@ let OKAction = UIAlertAction(title: "OK", style: .default)
     }
     
 //--FUNCTIONS--//
-    @IBAction func onSignIn(_ sender: Any)
-    {
-        if (usernameField.text == nil) || (passwordField.text == nil)
-        {
-            present(alertController, animated: true)
-        }
-        else {
-             loginUser()
-        }
-        
-    }
     
-    @IBAction func onSIgnUp(_ sender: Any)
-    {
-        if (usernameField.text == nil) || (passwordField.text == nil)
-        {
-            present(alertController, animated: true)
-        }
-        else {
-            registerUser()
-        }
-    }
     
     func registerUser() {
         // initialize a user object
@@ -105,4 +84,28 @@ let OKAction = UIAlertAction(title: "OK", style: .default)
             }
         }
     }
+    
+    @IBAction func onSignIn(_ sender: Any)
+    {
+        if (usernameField.text == "") || (passwordField.text == "")
+        {
+            present(alertController, animated: true)
+        }
+        else {
+            loginUser()
+        }
+        
+    }
+    
+    @IBAction func onSIgnUp(_ sender: Any)
+    {
+        if (usernameField.text == "") || (passwordField.text == "")
+        {
+            present(alertController, animated: true)
+        }
+        else {
+            registerUser()
+        }
+    }
+    
 }
