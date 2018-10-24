@@ -74,9 +74,22 @@ let OKAction = UIAlertAction(title: "OK", style: .default)
         
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""
+        let alertController = UIAlertController(title: "Erorr", message: "Wrong password", preferredStyle: .alert)
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            // handle cancel response here. Doing nothing will dismiss the view.
+        }
+        // add the cancel action to the alertController
+        alertController.addAction(cancelAction)
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
             if let error = error {
+                if error._code == 101
+                {
+                    self.present(alertController, animated: true) {
+                        // optional code for what happens after the alert controller has finished presenting
+                    }                }
                 print("User log in failed: \(error.localizedDescription)")
             } else {
                 print("User logged in successfully")

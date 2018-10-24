@@ -86,25 +86,67 @@
         <!--Chat-->
         <scene sceneID="biS-uU-PsQ">
             <objects>
-                <viewController id="hpl-Tz-8DS" customClass="ChatViewController" customModule="Parse_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="hpl-Tz-8DS" customClass="ChatViewController" customModule="Parse_Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sSW-Fb-2QX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BKt-Dn-Cjd">
-                                <rect key="frame" x="16" y="90" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-hl-YsH">
-                                <rect key="frame" x="268" y="90" width="91" height="30"/>
+                                <rect key="frame" x="268" y="63" width="91" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="onSend:" destination="hpl-Tz-8DS" eventType="touchUpInside" id="shM-ec-aR6"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Lz-XN-mhU">
+                                <rect key="frame" x="16" y="101" width="343" height="546"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="96" id="v1N-YU-xBu" customClass="ChatCell" customModule="Parse_Chat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v1N-YU-xBu" id="j4j-8x-mm8">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="95.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello I am typing in the Custom Cell" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-hw-ikN">
+                                                    <rect key="frame" x="0.0" y="37" width="343" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxF-9D-jLQ">
+                                                    <rect key="frame" x="8" y="8" width="327" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dDf-hw-ikN" firstAttribute="top" secondItem="cxF-9D-jLQ" secondAttribute="bottom" constant="8" id="GPP-lr-Yxr"/>
+                                                <constraint firstItem="cxF-9D-jLQ" firstAttribute="leading" secondItem="j4j-8x-mm8" secondAttribute="leading" constant="8" id="LGB-GO-i5V"/>
+                                                <constraint firstItem="dDf-hw-ikN" firstAttribute="leading" secondItem="j4j-8x-mm8" secondAttribute="leading" id="LTA-jP-Myo"/>
+                                                <constraint firstAttribute="trailing" secondItem="cxF-9D-jLQ" secondAttribute="trailing" constant="8" id="P9Z-sv-b8P"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dDf-hw-ikN" secondAttribute="bottom" constant="8" id="rmf-Cw-ek3"/>
+                                                <constraint firstAttribute="trailing" secondItem="dDf-hw-ikN" secondAttribute="trailing" id="xjY-vO-H7F"/>
+                                                <constraint firstItem="cxF-9D-jLQ" firstAttribute="top" secondItem="j4j-8x-mm8" secondAttribute="top" constant="8" id="xlS-57-Zdb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="dDf-hw-ikN" id="Yd4-3S-PbL"/>
+                                            <outlet property="usernameLabel" destination="cxF-9D-jLQ" id="2bS-ce-p7q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BKt-Dn-Cjd">
+                                <rect key="frame" x="16" y="64" width="244" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="diy-6L-ToW"/>
@@ -112,6 +154,7 @@
                     <navigationItem key="navigationItem" title="Chat" id="v8t-D4-Gme"/>
                     <connections>
                         <outlet property="chatMessageField" destination="BKt-Dn-Cjd" id="Jgd-6i-u3S"/>
+                        <outlet property="chatTableView" destination="9Lz-XN-mhU" id="Kdm-LI-g0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNr-VP-1hf" userLabel="First Responder" sceneMemberID="firstResponder"/>

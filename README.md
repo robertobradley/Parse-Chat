@@ -2,19 +2,19 @@
 
 **Name of your app** is a Chat app using an [open source Parse](http://parseplatform.org/) backend.
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
 The following **required** user stories are complete:
 
-- [ ] User can sign up and sign in to the login screen (+1pt)
-- [ ] User sees alerts for login exceptions, i.e. "account already exists", "wrong credentials", etc. (+1pt)
-- [ ] User can compose and send chat messages (+2pt)
-- [ ] User can view a list of chat messages in chronological order (+2pt)
-- [ ] Automatically Adjust Cell Size to Fit Text (+1pt)
-- [ ] Username of chat author is displayed in each chat message (+2pt)
-- [ ] Persist Logged in User (+1pt)
+- [x] User can sign up and sign in to the login screen (+1pt)
+- [x] User sees alerts for login exceptions, i.e. "account already exists", "wrong credentials", etc. (+1pt)
+- [x] User can compose and send chat messages (+2pt)
+- [x] User can view a list of chat messages in chronological order (+2pt)
+- [x] Automatically Adjust Cell Size to Fit Text (+1pt)
+- [x] Username of chat author is displayed in each chat message (+2pt)
+- [x] Persist Logged in User (+1pt)
 
 The following **stretch** user stories are implemented:
 
@@ -30,24 +30,24 @@ The following **additional** user stories are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. I would really like to discuss how to do parse objects in more detail
+2. I would like to discuss more about autolayout.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/n351qca.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+I had a lot of emotional things going on in the week that this was due, it took me a while because some of the content in the weeks prior took priority and I wasn't full understanding how to access data through parse.
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2018] [Roberto Bradley]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
